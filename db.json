@@ -3,14 +3,8 @@
     {
       "todoText": "Clean car",
       "completed": false,
-      "important": false,
+      "important": true,
       "id": 11
-    },
-    {
-      "id": 3,
-      "todoText": "Wash clothes",
-      "completed": true,
-      "important": false
     },
     {
       "id": 5,
