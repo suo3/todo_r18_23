@@ -1,10 +1,10 @@
 {
   "todos": [
     {
-      "todoText": "Clean car",
+      "todoText": "clear",
       "completed": false,
-      "important": true,
-      "id": 11
+      "important": false,
+      "id": 12
     },
     {
       "id": 5,
