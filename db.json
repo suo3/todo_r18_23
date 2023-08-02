@@ -9,7 +9,7 @@
     {
       "id": 5,
       "todoText": "Take out garbage",
-      "completed": false,
+      "completed": true,
       "important": true
     },
     {
