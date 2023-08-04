@@ -1,5 +1,6 @@
 import ErrorBoundary from "../common/ErrorBoundary";
-
+import ToDoItemText from "./ToDoItemText";
+import { memo } from 'react'
 
 const Inner = ({
   todoItem,
@@ -20,14 +21,10 @@ const Inner = ({
           return handleToggleCompleted(todoItem.id);
         }}
       >
-        {todoItem.important ? (
-          <span className="badge warning-bg">
-            <i className="fa fa-exclamation-circle"></i>
-          </span>
-        ) : null}
-        {todoItem.todoText}
+
+        <ToDoItemText todoText={todoItem.todoText} important={todoItem.important} />
       </div>
-          {todoItem.todoText.slice(0,60)}
+         
       {idUpdating === todoItem.id ? (
         <button
           className="btn btn-primary busy-spinner"
@@ -87,4 +84,11 @@ const ToDo = (props) => {
   )
 }
 
-export default ToDo;
+export default memo(ToDo, (prevProps, nextProps) => {
+  return !(
+    prevProps.todoItem.completed != nextProps.todoItem.completed ||
+    prevProps.todoItem.important != nextProps.todoItem.important ||
+    prevProps.idUpdating === prevProps.todoItem.id ||
+    nextProps.idUpdating === nextProps.todoItem.id
+  )
+});

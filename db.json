@@ -1,15 +1,15 @@
 {
   "todos": [
     {
-      "todoText": "clear",
+      "todoText": "dress to school",
       "completed": false,
       "important": false,
-      "id": 12
+      "id": 13
     },
     {
       "id": 5,
       "todoText": "Take out garbage",
-      "completed": true,
+      "completed": false,
       "important": true
     },
     {
